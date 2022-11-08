@@ -170,11 +170,8 @@ add_library(
 	.editorconfig
 )
 
-target_compile_features(
-	${PROJECT_NAME}
-	PRIVATE
-		cxx_std_23
-)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 23)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
 
 target_include_directories(
 	${PROJECT_NAME}
