@@ -256,7 +256,7 @@ namespace FEC::GRAPHICS
 
 			if (const auto processLists = RE::ProcessLists::GetSingleton(); processLists) {
 				const auto handle = a_ref->CreateRefHandle();
-				processLists->GetShaderEffects([&](RE::ShaderReferenceEffect& a_shaderEffect) {
+				processLists->ForEachShaderEffect([&](RE::ShaderReferenceEffect& a_shaderEffect) -> RE::BSContainer::ForEachResult {
 					if (a_shaderEffect.target == handle) {
 						if (const auto effectData = a_shaderEffect.effectData; effectData &&
 																			   effectData->data.flags.all(Flags::kSkinOnly) &&
@@ -264,7 +264,7 @@ namespace FEC::GRAPHICS
 							a_shaderEffect.finished = true;
 						}
 					}
-					return true;
+					return RE::BSContainer::ForEachResult::kContinue;
 				});
 			}
 		}
