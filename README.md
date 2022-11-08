@@ -14,12 +14,14 @@ Dll for [Skyrim mod FEC](https://www.nexusmods.com/skyrimspecialedition/mods/353
 * [CommonLibSSE](https://github.com/powerof3/CommonLibSSE/tree/dev)
 	* You need to build from the powerof3/dev branch
 	* Add this as as an environment variable `CommonLibSSEPath`
+	* **ALTERNATIVELY:** run `git submodule update --init --recursive` after `git clone`
 * [PapyrusExtender](https://github.com/powerof3/PapyrusExtenderSSE)
 	* Runtime requirement
 	* Also available [prebuilt](https://www.nexusmods.com/skyrimspecialedition/mods/22854)
 	* VR version available [prebuilt](https://www.nexusmods.com/skyrimspecialedition/mods/58296)
 * [CommonLibVR](https://github.com/alandtse/CommonLibVR/tree/vr)
 	* Add this as as an environment variable `CommonLibVRPath`
+	* **ALTERNATIVELY:** run `git submodule update --init --recursive` after `git clone`
 
 ## User Requirements
 * [Address Library for SKSE](https://www.nexusmods.com/skyrimspecialedition/mods/32444)
